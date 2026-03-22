@@ -140,12 +140,6 @@ AccessibilityQuest/
 
 ---
 
-## License
-
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
 ## Notes
 
 * Works on both iOS and Android devices via Expo Go.
