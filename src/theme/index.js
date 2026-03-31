@@ -7,7 +7,7 @@ export const darkTheme = {
   surface2: '#22222F',
   surface3: '#2A2A3A',
   border: '#32324A',
-  primary: '#6C63FF',
+  primary: '#5A52E0',
   primaryLight: '#8B85FF',
   primaryDim: 'rgba(108,99,255,0.15)',
   success: '#22D97A',
@@ -18,7 +18,7 @@ export const darkTheme = {
   warningDim: 'rgba(255,190,61,0.15)',
   text: '#F0EFFF',
   textSecondary: '#9898B8',
-  textMuted: '#5C5C7A',
+  textMuted: '#7A7A9A',
   gold: '#FFD166',
 };
 
@@ -32,15 +32,15 @@ export const lightTheme = {
   primary: '#6C63FF',
   primaryLight: '#5248CC',
   primaryDim: 'rgba(108,99,255,0.10)',
-  success: '#16A85A',
+  success: '#0E8A47',
   successDim: 'rgba(22,168,90,0.12)',
-  error: '#E03050',
+  error: '#D42B4A',
   errorDim: 'rgba(224,48,80,0.12)',
-  warning: '#C47F00',
+  warning: '#A86A00',
   warningDim: 'rgba(196,127,0,0.12)',
   text: '#111128',
   textSecondary: '#4A4A72',
-  textMuted: '#8888AA',
+  textMuted: '#6A6A8A',
   gold: '#B8860B',
 };
 
@@ -107,7 +107,7 @@ export const radii = {
 };
 
 export const fontSizes = {
-  xs: 11,
+  xs: 12,
   sm: 13,
   md: 15,
   base: 16,

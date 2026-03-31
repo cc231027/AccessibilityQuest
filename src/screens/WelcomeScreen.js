@@ -80,9 +80,9 @@ function InfoModal({ visible, onClose, theme }) {
               { backgroundColor: theme.surface, borderColor: theme.border },
               { transform: [{ scale: scaleAnim }], opacity: fadeAnim },
             ]}>
-              {/* Header gradient */}
+              {/* Header gradient — updated to #5A52E0 / #8880FF */}
               <LinearGradient
-                colors={['#6C63FF', '#9B8FFF']}
+                colors={['#5A52E0', '#8880FF']}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
                 style={ms.header}
@@ -251,8 +251,9 @@ export default function WelcomeScreen({ navigation }) {
           {/* ── Hero ── */}
           <View style={s.hero}>
             <View style={s.iconGlow} />
+            {/* App icon gradient — updated to #5A52E0 / #8880FF */}
             <LinearGradient
-              colors={['#6C63FF', '#8B85FF']}
+              colors={['#5A52E0', '#8880FF']}
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 1 }}
               style={s.appIcon}
@@ -342,9 +343,9 @@ const styles = (theme) => StyleSheet.create({
     paddingBottom: spacing.xs,
   },
   infoBtn: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,          // perfect circle
+    width: 44,                 // bumped from 36 to meet AAA 44×44 touch target
+    height: 44,
+    borderRadius: 22,          // perfect circle
     borderWidth: 1.5,
     alignItems: 'center',
     justifyContent: 'center',
@@ -370,7 +371,8 @@ const styles = (theme) => StyleSheet.create({
     width: 160,
     height: 160,
     borderRadius: 80,
-    backgroundColor: 'rgba(108,99,255,0.18)',
+    // updated rgba to match #5A52E0
+    backgroundColor: 'rgba(90,82,224,0.18)',
   },
   appIcon: {
     width: 88,
@@ -379,7 +381,8 @@ const styles = (theme) => StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.md,
-    shadowColor: '#6C63FF',
+    // updated shadow color to match new primary
+    shadowColor: '#5A52E0',
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.55,
     shadowRadius: 20,
