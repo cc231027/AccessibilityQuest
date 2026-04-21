@@ -23,7 +23,7 @@ const csvCell = (value) => `"${String(value ?? '').replace(/"/g, '""')}"`;
 
 export async function exportAllParticipantData() {
   try {
-    // ── 1. Find all participant storage keys ──────────────────────────────
+    // ── 1. Find all participant storage keys ──
     const allKeys = await AsyncStorage.getAllKeys();
     const progressKeys = allKeys.filter(k => k.startsWith('aq_progress_'));
 
@@ -31,10 +31,10 @@ export async function exportAllParticipantData() {
       return { success: false, message: 'No participant data found to export.' };
     }
 
-    // ── 2. Load all participants' data ────────────────────────────────────
+    // ── 2. Load all participants' data ──
     const pairs = await AsyncStorage.multiGet(progressKeys);
 
-    // ── 3. Build CSV rows ─────────────────────────────────────────────────
+    // ── 3. Build CSV rows ──
     const headers = [
       'Username',
       'Level ID',
@@ -99,7 +99,7 @@ export async function exportAllParticipantData() {
       }
     }
 
-    // ── 4. Write to a temp file ───────────────────────────────────────────
+    // ── 4. Write to a temp file ──
     const csvContent = rows.join('\n');
     const timestamp  = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
     const filename   = `accessibility_quest_results_${timestamp}.csv`;
@@ -110,7 +110,7 @@ export async function exportAllParticipantData() {
       encoding: 'utf8',
     });
 
-    // ── 5. Share ──────────────────────────────────────────────────────────
+    // ── 5. Share ──
     const canShare = await Sharing.isAvailableAsync();
     if (!canShare) {
       return { success: false, message: 'Sharing is not available on this device.' };
