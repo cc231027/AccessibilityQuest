@@ -99,7 +99,7 @@ export const levels = [
         text: 'A button contains only an icon with no visible text label. What must it have?',
         options: [
           'A tooltip that appears on long press',
-          'An accessibilityLabel describing its action',
+          'An accessibility label describing its action',
           'A larger touch target',
           'A border to make it visible',
         ],
@@ -257,7 +257,7 @@ export const levels = [
         text: 'An app has a back button that looks like a left arrow but has no accessible label. What should be added?',
         options: [
           'A tooltip',
-          'An accessibilityLabel such as "Go back to previous screen"',
+          'An accessibility label such as "Go back to previous screen"',
           'A larger icon',
           'A border around the button',
         ],
